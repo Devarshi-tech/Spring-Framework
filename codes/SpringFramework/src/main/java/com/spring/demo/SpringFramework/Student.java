@@ -1,11 +1,21 @@
 package com.spring.demo.SpringFramework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
 	
 	private String studentName;
 	private int studentId;
 	private String address;
+	private List<Integer> list = new ArrayList<>();
 	
+	public List<Integer> getList() {
+		return list;
+	}
+	public void setList(List<Integer> list) {
+		this.list = list;
+	}
 	@Override
 	public String toString() {
 		return "Student [studentName=" + studentName + ", studentId=" + studentId + ", address=" + address + "]";

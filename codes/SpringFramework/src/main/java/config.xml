@@ -1,8 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!-- First-->
+    <!-- bean definitions here -->
+    <bean class="com.spring.demo.SpringFramework.Student" name="student1">
+		<!-- Setter Injection -->
+		<!-- 
+		<property name="studentId">
+			<value>22344</value>
+		</property>
+		-->
+		
+		<property name="studentId" value="2234455" />
+		
+		<property name="studentName">
+			<value>Devarshi Patidar</value>
+		</property>
+		
+		<property name="address">
+			<value>Delhi</value>
+		</property>
+		
+	</bean>
+	
+<!-- Second-->
+	<!--  Setter Injection 
+	<bean class="com.spring.demo.SpringFramework.Student" name="student2">
+		
+		
+		<property name="studentId">
+			<value>22344</value>
+		</property>
+		
+		<property name="studentId" value="223445566" />
+		
+		<property name="studentName">
+			<value>Devarshi Patidar</value>
+		</property>
+		
+		<property name="address">
+			<value>Delhi</value>
+		</property>
+		
+	</bean>
+	-->
+	
+<!-- Third -->
+	<!-- Use P schema to set values-->
+	<bean class="com.spring.demo.SpringFramework.Student" 
+	name="student2" p:studentName="Ram" />
+
+<!-- Collections -->	
+
+<!-- Four -->
+	<!-- List -->
+	<bean class="com.spring.demo.SpringFramework.Student"
+	name="student3">
+		<property name="list">
+			<list>
+			<value>1</value>
+			<value>12</value>
+			<value>13</value>
+		</list>
+		</property>
+		
+	</bean>
+
 </beans>
+
+
+
+
