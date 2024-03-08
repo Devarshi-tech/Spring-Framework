@@ -1,4 +1,4 @@
-package com.spring.demo.SpringFramework.lifecycle;
+package com.spring.demo.SpringFramework.lifecycle.xml;
 
 public class Samosa {
 	private double price;

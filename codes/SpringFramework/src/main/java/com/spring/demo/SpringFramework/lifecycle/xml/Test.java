@@ -1,4 +1,4 @@
-package com.spring.demo.SpringFramework.lifecycle;
+package com.spring.demo.SpringFramework.lifecycle.xml;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
