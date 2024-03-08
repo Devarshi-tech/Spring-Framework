@@ -9,7 +9,10 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
-
+	
+	<!-- Enable all annotations -->
+	<context:annotation-config />
+	
 	<!-- XML-->
 	<!-- 
 	<bean name="samosa1" class="com.spring.demo.SpringFramework.lifecycle.xml.Samosa"
@@ -19,9 +22,17 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 	-->
 	
 	<!-- Interfaces -->
+	<!-- 
 	<bean name="pepsi1" class="com.spring.demo.SpringFramework.lifecycle.interfaces.Pepsi">
 		<property name="price" value="5" 
 	    />
+	</bean>
+	-->
+	
+	<!-- Annotations -->
+	
+	<bean name="pizza1" class="com.spring.demo.SpringFramework.lifecycle.annotations.Pizza">
+		<property name="price" value="50" />
 	</bean>
 </beans>
 
