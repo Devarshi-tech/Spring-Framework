@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="person" class="com.spring.demo.SpringFramework.constructorinjection.Person">
+		<!-- For first parameter -->
+		<constructor-arg >
+			<value>Devarshi</value>
+		</constructor-arg>
+		
+		<!-- Second parameter -->
+		<!-- 
+		<constructor-arg>
+			<value>12</value>
+		</constructor-arg>
+		-->
+		<!-- in case of ambiguity use 'type'-->
+		<constructor-arg value="12" type="int"/>
+		<constructor-arg ref="certi"></constructor-arg>
+	</bean>
+	<!-- Person class is dependent on Certi class-->
+	<bean name="certi" class="com.spring.demo.SpringFramework.constructorinjection.Certi">
+		<constructor-arg value="Java development"></constructor-arg>		
+	</bean>
+	
+	<bean name="add" class="com.spring.demo.SpringFramework.constructorinjection.Addition">
+		<!-- by default string constructor will be called 
+		 so in this case we need to specify type or index-->
+		<constructor-arg value="8832332" type="int" index="1"></constructor-arg>
+		<constructor-arg value="232323" type="int" index="0"></constructor-arg>
+	</bean>
+
+</beans>
+
+
+
+
