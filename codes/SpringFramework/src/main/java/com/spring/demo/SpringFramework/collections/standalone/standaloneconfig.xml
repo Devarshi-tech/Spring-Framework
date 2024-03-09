@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<!-- Standalone list by util schema-->
+	<util:list list-class="java.util.Vector" 
+	id="mybestfriends">
+		<value>Devarshi</value>
+		<value>Muskan</value>
+		<value>patidar</value>
+	</util:list>
+	
+	<util:map map-class="java.util.HashMap" id="feesstructure" >
+		<entry key="Spring Frame work" value="8000" />
+		<entry key="Django" value="5000" />
+		<entry key="Hibernate" value="3000" />
+	</util:map>
+	
+	<util:properties id="dbconfig" >
+		<prop key="driver">com.mysql.jdbc.Driver</prop>
+		<prop key="username">devarshi </prop>
+		<prop key="password">abcd</prop>
+	</util:properties>
+	
+	<bean name="person1" class="com.spring.demo.SpringFramework.collections.standalone.Person">
+		<property name="friends" ref="mybestfriends" />
+		<property name="feesStructure" ref="feesstructure" />
+		<property name="properties" ref="dbconfig" ></property>
+	</bean>
+		
+</beans>
+
+
+
+

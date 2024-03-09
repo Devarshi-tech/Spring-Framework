@@ -15,6 +15,9 @@ public class Test {
 		System.out.println(e1.getAddresses());
 		System.out.println(e1.getProps());
 		
+//		by default implementation is ArrayList
+		System.out.println(e1.getPhones().getClass().getName());
+		
 	}
 
 }

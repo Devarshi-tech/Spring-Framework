@@ -44,11 +44,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 		</property>		
 	
 	</bean>
-	<bean>
-		<property name="">
-			<ref bean=""/>
-		</property>
-	</bean>
+	
 </beans>
 
 
