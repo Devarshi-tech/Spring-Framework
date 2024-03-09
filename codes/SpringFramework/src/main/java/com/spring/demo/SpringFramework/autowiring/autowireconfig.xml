@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="address" class="com.spring.demo.SpringFramework.autowiring.Address">
+		<property name="street" value="mr10"></property>
+		<property name="city" value="Indore"></property>
+	</bean>
+	
+	<!-- without giving reference we can use autowire -->
+	<!-- by name will see for adress bean in xml file and autowire Address class-->
+		<!-- property name of Address class should be address (same as address bean name) -->
+	<!-- 
+	<bean autowire="byName" name="emp" class="com.spring.demo.SpringFramework.autowiring.Employee">		
+	</bean>
+	-->
+	
+	
+	<!-- byType will check for type in the xml file
+		(emp class has address property so autowired will check for a bean in xml file for type of address 
+		this calls setter method to set values
+	 -->
+	<!-- 
+	<bean autowire="byType" name="emp" class="com.spring.demo.SpringFramework.autowiring.Employee">
+	</bean>
+	-->
+	
+	<!-- by constructor 
+	 	this calls parameterized constructor to set values
+	 -->
+	<bean autowire="constructor" name="emp" class="com.spring.demo.SpringFramework.autowiring.Employee"></bean>
+
+</beans>
+
+
