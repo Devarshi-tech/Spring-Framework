@@ -1,4 +1,4 @@
-package com.spring.demo.SpringFramework.autowiring.annotation;
+package com.spring.demo.SpringFramework.autowiring.autowireannotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,7 +9,7 @@ public class Test {
 		// TODO Auto-generated method stub
 		
 		ApplicationContext context = 
-				new ClassPathXmlApplicationContext("com/spring/demo/SpringFramework/autowiring/annotation/autowireconfig.xml");
+				new ClassPathXmlApplicationContext("com/spring/demo/SpringFramework/autowiring/autowireannotation/autowireconfig.xml");
 		
 		Employee e = (Employee) context.getBean("emp");
 		

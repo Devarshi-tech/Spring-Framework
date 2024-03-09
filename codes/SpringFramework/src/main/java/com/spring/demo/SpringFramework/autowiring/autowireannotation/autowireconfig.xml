@@ -12,13 +12,13 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:annotation-config />
 	
-	<bean name="address1" class="com.spring.demo.SpringFramework.autowiring.annotation.Address">
+	<bean name="address1" class="com.spring.demo.SpringFramework.autowiring.autowireannotation.Address">
 		<property name="street" value="mr10"></property>
 		<property name="city" value="Indore"></property>
 	</bean>
 	
 
-	<bean name="emp" class="com.spring.demo.SpringFramework.autowiring.annotation.Employee"></bean>
+	<bean name="emp" class="com.spring.demo.SpringFramework.autowiring.autowireannotation.Employee"></bean>
 
 </beans>
 

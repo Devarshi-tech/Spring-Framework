@@ -1,4 +1,4 @@
-package com.spring.demo.SpringFramework.autowiring.annotation;
+package com.spring.demo.SpringFramework.autowiring.autowireannotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
